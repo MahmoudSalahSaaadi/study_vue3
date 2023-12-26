@@ -1,0 +1,87 @@
+export default {
+	// breadcrumbs
+	breadcrumbs: {
+		index: 'Home',
+		home: 'Home'
+	},
+	// general
+	copyRightMessage: 'year© Andalusia Wellness Park. All rights reserved',
+	help: 'Help',
+	termsAndConditions: 'Terms & Conditions',
+	privacyPolicy: 'Privacy Policy',
+	success: 'Success',
+	error: 'Error',
+	investors: {
+		investorType: 'Investor Type',
+		questionnaire: 'Questionnaire',
+		investorOnboarding: 'Investor onboarding',
+		completeOnboarding: 'Complete onboarding',
+		continue: 'Continue',
+		submit: 'Submit',
+		startQuestionnaire: 'Start Questionnaire',
+		pleaseTypeYourAnswer: 'Please type your answer',
+		youAreAllSetup: 'You’re all Setup',
+		thanksForYourTime: 'Thanks for your time our team will contact you',
+		goToMyPortfolio: 'Go to My Portfolio',
+	},
+	auth: {
+		theModernWayForAnyoneToInvestMoney: 'The modern way for anyone to invest money',
+		strategiesForLongTermGrowthAndFinancialSuccess: 'Strategies for Long-Term Growth and Financial Success',
+		unlockingInvestmentRewardsStrategiesForSuccess: 'Unlocking Investment Rewards: Strategies for Success',
+		createNewAccount: 'Create New Account',
+		fullName: 'Full Name',
+		enterFullName: 'Enter Full Name',
+		emailAddress: 'Email Address',
+		enterEmailAddress: 'Enter Email Address',
+		mobileNumber: 'Mobile Number',
+		passwordLabel: 'Password',
+		enterPassword: 'Enter Password',
+		iAgreeToThe: 'I agree to the',
+		terms: 'Terms',
+		and: 'and',
+		privacyPolicy: 'Privacy Policy',
+		createAccount: 'Create Account',
+		or: 'Or',
+		continueAsGuest: 'Continue as Guest',
+		alreadyHaveAnAccount: 'Already have an account?',
+		signIn: 'Sign In',
+		rememberMe: 'Remember Me',
+		forgotPassword: 'Forgot Password',
+		resendCode: 'Resent Verification Code',
+		resendCodeLabel: 'Resend OTP',
+		dontHaveAnAccount: 'Don’t have an account?',
+		pleaseEnterEmailToSendCode: 'Please enter email to send code',
+		iRememberedThePassword: 'I remembered the password...',
+		sendCode: 'Send Code',
+		passwordReset: 'Password Reset',
+		enterTheNewPasswordThatYouWouldLikeToUse: 'Enter the new password that you would like to use',
+		newPassword: 'New Password',
+		reset: 'Reset',
+		resendReset: 'Resend reset email',
+		otpVerification: 'OTP Verification',
+		codeHasBeenSent: 'The four-digit activation code has been sent to the following Email Address',
+		pleaseEnterItToBeAbleToVerifyYourEmail: 'Please enter it to be able to verify your email',
+		didntReceiveTheCodeResendAfterSeconds: 'Didn\'t receive the code? Resend after :seconds seconds',
+		resendIt: 'Resend it',
+		verifyEmail: 'Verify email',
+		enterAnotherEmailAddress: 'Enter another Email address',
+		password: {
+			uppercase: 'Uppercase letter',
+			specialChar: 'Special character',
+			number: 'Number',
+			min: 'Min. 8 characters'
+		}
+	},
+	validations: {
+		required: 'this is required',
+		email: 'must be a valid email',
+		min: 'must be at least :min characters',
+		max: 'must be at most :max characters',
+		number: 'Must be a number',
+		password: 'Password must contain at least one uppercase letter, a number and a special character',
+		terms: 'Must agree to the terms and conditions'
+	},
+	layouts: {
+		title: 'Andalusia Wellness Park'
+	}
+};
