@@ -1,0 +1,13 @@
+node_modules
+public
+.output
+.nitro
+server
+stores
+utils
+*.log*
+.nuxt
+.cache
+.env
+dist
+.DS_Store

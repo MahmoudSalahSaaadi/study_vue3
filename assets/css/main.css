@@ -1,0 +1,167 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');*/
+@import '@splidejs/splide/dist/css/splide.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-display: swap;
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: normal;
+        src: url('~/assets/fonts/avenir-lt-pro-normal.otf') format('OpenType');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        src: url('~/assets/fonts/avenir-lt-pro-medium.otf') format('OpenType');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: bold;
+        src: url('~/assets/fonts/avenir-lt-pro-black.otf') format('OpenType');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Neosans';
+        font-style: normal;
+        font-weight: normal;
+        src: url('~/assets/fonts/neo-sans-arabic-regular.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Neosans';
+        font-style: normal;
+        font-weight: 500;
+        src: url('~/assets/fonts/neo-sans-arabic-medium.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-display: swap;
+        font-family: 'Neosans';
+        font-style: normal;
+        font-weight: bold;
+        src: url('~/assets/fonts/neo-sans-arabic-bold.woff2') format('woff2');
+    }
+}
+
+@layer components {
+    .headline-1 {
+        @apply font-bold text-2xl lg:text-5xl xl:text-[50px]
+    }
+
+    .headline-2 {
+        @apply font-bold text-xl lg:text-3xl xl:text-[32px]
+    }
+
+    .headline-3 {
+        @apply font-bold text-[18px] lg:text-2xl
+    }
+
+    .headline-4 {
+        @apply font-bold text-[16px] lg:text-[18px] xl:text-2xl
+    }
+
+    .headline-5 {
+        @apply font-bold text-sm lg:text-[16px] xl:text-[18px]
+    }
+
+    .body-1 {
+        @apply text-[16px] lg:text-[20px]
+    }
+
+    .body-2 {
+        @apply text-[14px] lg:text-[18px]
+    }
+
+    .body-3 {
+        @apply text-[14px] lg:text-[16px]
+    }
+
+    .btn {
+        @apply inline-block py-3 px-10 text-center capitalize rounded-lg text-[20px] transition-colors duration-300 font-medium
+    }
+
+    .btn-primary {
+        @apply bg-primary-500 text-white;
+    }
+
+    .btn-default {
+        @apply text-primary-500 border border-primary-500;
+    }
+
+    .view-button {
+        /*remember to add the `group` class to the parent*/
+        @apply inline-block group-hover:text-2xl group-hover:leading-10 text-[22px] leading-10 font-medium text-primary-500 duration-500 transition-[font] relative after:duration-500 after:transition-all after:absolute after:group-hover:w-full after:h-px after:w-[80%] after:group-hover:h-[2px] after:bg-primary-500 after:bottom-0 after:start-0 mt-6
+    }
+}
+
+.menu-link {
+    content: '';
+    @apply relative after:w-0 after:ltr:left-0 after:rtl:right-0 after:block after:bg-transparent hover:after:bg-primary-300 after:absolute after:top-full after:mt-1 after:h-0.5 after:transition-all after:duration-300 after:ltr:origin-left after:rtl:origin-right hover:after:w-3/5
+}
+
+.menu-link-header {
+    @apply font-bold text-white text-4xl
+}
+
+.menu-link-footer {
+    @apply text-white
+}
+
+.active-link {
+    content: '';
+    @apply text-primary-300 font-bold relative after:w-3/5 after:ltr:left-0 after:rtl:left-0 after:block after:bg-primary-300 after:absolute after:top-full after:mt-1 after:h-0.5
+}
+
+.custom-is-active.is-active {
+    @apply bg-primary-200 w-3.5 h-3.5
+}
+
+.custom-slider-bullet {
+    @apply bg-primary-200;
+}
+.custom-is-active{
+    @apply bg-primary-200/50 w-3.5 h-3.5
+}
+.custom-is-active.is-active {
+    @apply bg-primary-200 w-3.5 h-3.5
+}
+.hero-custom-is-active.is-active {
+    @apply bg-secondary-400 w-3.5 h-3.5
+}
+
+.custom-white-is-active.is-active {
+    @apply bg-white w-3.5 h-3.5
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    @apply w-1.5;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply rounded-sm bg-primary-300;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-300
+}

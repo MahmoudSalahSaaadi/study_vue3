@@ -1,0 +1,16 @@
+composables
+lang
+node_modules
+plugins
+public
+server
+stores
+utils
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
