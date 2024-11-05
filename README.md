@@ -49,8 +49,6 @@ class User {
     return `Message From Parent Class`;
   }
 }
-```
-``` javascript
 class Admin extends User {
   constructor(name, email) {
     super(name, email);
@@ -63,5 +61,4 @@ class Admin extends User {
   }
 }
 ```
-`Meta Data And Descriptor`
 
