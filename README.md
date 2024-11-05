@@ -66,6 +66,13 @@ class Admin extends User {
 ### Object.defineProperty(obj, prop, descriptor)
 
   ``` javascript
+
+  
+const myObject = {
+	a: 1,
+	b: 2,
+  };
+   
     Object.defineProperty(myObject, "c", {
 	writable: false,
 	enumerable: false,
