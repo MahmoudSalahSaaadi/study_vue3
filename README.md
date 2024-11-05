@@ -61,4 +61,22 @@ class Admin extends User {
   }
 }
 ```
+`Object Meta Data
+  writable
+  enumerable
+  configurable
+  ============
+  Object.defineProperty(obj, prop, descriptor)`
 
+  ``` javascript
+    Object.defineProperty(myObject, "c", {
+	writable: false,
+	enumerable: false,
+	configurable: true,
+	value: 3,
+  });
+  
+  Object.defineProperty(myObject, "c", {
+	writable: true,
+  });
+  ```
