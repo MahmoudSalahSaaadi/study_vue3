@@ -267,14 +267,34 @@ let infoe = {
 
 console.log(info);
 
-// functions
-let calulator = {
-    sum(x, y) {
-      return x + y;
-    },
-    sub(x, y) {
-      return x - y;
-    }
-  };
-  console.log(calulator.sum(1, 2));
+
 //Object methods
+// === assign
+let obj1 = {
+  name: 'Mahmoud'
+}
+
+let obj3 = {
+  title: 'frontend developer'
+}
+
+let obj2 = Object.assign({},obj1,obj3);
+console.log(obj1, obj2,'assign');
+
+// === values / keys
+let tasks = {
+  0: 'clean home',
+  1: 'buy groceries',
+  2: 'go party'
+}
+console.log(Object.values(tasks),'values / keys');
+
+// === sealed / freeze
+const myObj = {
+    name: 'John',
+    age: 30
+  }
+  // Object.seal(myObj);
+  // console.log(Object.isSealed(myObj));
+  Object.freeze(myObj);
+  console.log(Object.isFrozen(myObj));
