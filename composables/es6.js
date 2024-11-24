@@ -4,10 +4,10 @@
 // let=>  not Hosting & block scope & not Re Declaration
 // const=>not Hosting & block scope & not Re Declaration & not override
 function testVar () {
-    var x = 10;
+    let x = 10;
 
     if(true) {
-      x = 11;
+    let x = 11;
     }
   
     function test() { 
@@ -35,20 +35,21 @@ let people = [
   { name: 'Kareem', age: 35 }
 ];
 // function expression version
+// filter , map ,  => return array
 let ageSums = people
   .filter(function(person) {
     return person.age > 25 && person.age < 30;
   })
   .filter(function(person) {
-    return person.name === 'Ahmed';
+    return person.name === 'Ahmed'; // return array of objects
   })
-  .map(function(person) {
+  .map(function(person) { // return array of values 
     return person.age;
   })
   .reduce(function(prev, curr) {
     return (prev || 0) + curr;
   });
-console.log(ageSums);
+console.log(ageSums, 'dd');
 // arrow function version
 let ageSum = people
   .filter(person => person.age > 25 && person.age < 30)
@@ -77,12 +78,11 @@ console.log(ageSum);
 
 //Spread Operator=> ...array
 let arr = [1, 2, 3];
-let copiedArr = [...arr];
-copiedArr.push(4);
+let copiedArr = [...arr]; // and  deep copy
+copiedArr.push(4); 
 console.log(arr, copiedArr);
+
 //Rest Parameter => ...array => 
-
-
 function logArguments(type, base, ...args) {
     console.log(args);
     for (let arg of args) {
@@ -94,11 +94,10 @@ function logArguments(type, base, ...args) {
 
 // promises => pending => resolve => reject
 
-
 let delay = duration => new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve();
-    }, duration);
+    }, 4000);
   
     setTimeout(()=> {
       reject('Error');
@@ -106,8 +105,9 @@ let delay = duration => new Promise((resolve, reject) => {
   });
 delay(300)
   .then((a)=> console.log(a))
-  .catch((error)=> console.log(error));
+  .catch((error)=> console.log(error,"ssssssss"));
 
+console.log("----------------------------");
 
 //Maps
 
@@ -287,7 +287,7 @@ let tasks = {
   1: 'buy groceries',
   2: 'go party'
 }
-console.log(Object.values(tasks),'values / keys');
+console.log(Object.keys(tasks),'values / keys');
 
 // === sealed / freeze
 const myObj = {
@@ -298,3 +298,76 @@ const myObj = {
   // console.log(Object.isSealed(myObj));
   Object.freeze(myObj);
   console.log(Object.isFrozen(myObj));
+
+
+
+//before
+const users = [];
+
+function addUser(name, email) {
+    const user = {
+        name: name,
+        email: email,
+    };
+    users.push(user);
+}
+
+function displayUsers() {
+    users.forEach(user => {
+        console.log(`Name: ${user.name}, Email: ${user.email}`);
+    });
+}
+
+addUser("Alice", "alice@example.com");
+addUser("Bob", "bob@example.com");
+displayUsers();
+
+function addUser(name, email) {
+    const user = {
+        name: name,
+        email: email,
+    };
+    users.push(user);
+}
+
+function displayUsers() {
+    users.forEach(user => {
+        console.log(`Name: ${user.name}, Email: ${user.email}`);
+    });
+}
+
+addUser("Alice", "alice@example.com");
+addUser("Bob", "bob@example.com");
+displayUsers();
+
+//after OOP
+  class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    display() {
+        console.log(`Name: ${this.name}, Email: ${this.email}`);
+    }
+}
+
+class UserManager {
+    constructor() {
+        this.users = [];
+    }
+
+    addUser(user) {
+        this.users.push(user);
+    }
+
+    displayUsers() {
+        this.users.forEach(user => user.display());
+    }
+}
+
+const userManager = new UserManager();
+userManager.addUser(new User("Alice", "alice@example.com"));
+userManager.addUser(new User("Bob", "bob@example.com"));
+userManager.displayUsers();
+
