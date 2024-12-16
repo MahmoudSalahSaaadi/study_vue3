@@ -115,12 +115,7 @@ class User {
   ============
   Object.defineProperty(obj, prop, descriptor)
 */
-
-const myObject = {
-	a: 1,
-	b: 2,
-  };
-  
+ 
   Object.defineProperty(myObject, "c", {
 	writable: false,
 	enumerable: false,
